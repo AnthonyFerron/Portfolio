@@ -1,2 +1,6 @@
 dist/
 node_modules/
+./tailwind.config.js
+./postcss.config.js
+./package-lock.json
+./main.js

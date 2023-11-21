@@ -1,69 +1,50 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anthony Ferron</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body >
-
+  <body class="bg-gradient-to-r from-sky-950 to-blue-950 text-white scroll-down">
     <!-- head -->
+    <nav class="w-[100%] h-[100px] bg-blue-700 shadow-zinc-800 shadow-xl mb-10">
+      <label for="toggle" class="flex md:hidden">☰</label>
+      <input type="checkbox" class="hidden">
+      <div class="flex justify-around items-center"> <!-- main_pages -->
+        <a href="#" class="w-[33%] flex items-center justify-center h-[100px] hover:bg-blue-400 shadow-zinc-800 shadow-xl">Contact</a>
+        <a href="#" class="w-[33%] flex items-center justify-center h-[100px] hover:bg-blue-400 shadow-zinc-800 shadow-xl">Anthony Ferron</a>
+        <a href="#" class="w-[33%] flex items-center justify-center h-[100px] hover:bg-blue-400 shadow-zinc-800 shadow-xl">Mes Projets</a>
 
-    <!-- <div class="grid bg-slate-900 h-20 w-[100%]">
-      <div class="flex justify-center">
-        <a class="text-white text-4xl mt-4">Anthony Ferron</a> 
       </div>
-    </div> -->
-    <nav id="mobilemenu">
-
-      <div class="parent">
-        <label for="toggle">☰</label>
-        <input type="checkbox" id="toggle">
-        <div class="div1">
-          <a href="">Mes Projets</a>
-          <h1>Anthony Ferron</h1>
-          <a href="#">Contact</a> 
-        </div>
-        <!-- width: 20%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100px;
-        text-decoration: none;
-        color: #001c66; -->
-          
-  
-        <div class="div2">          
-        </div>
-        <div class="div3">
-          <img class="logo" src="./68630b8eb3925152cf053a818e0514a4.jpg">
-        </div>
-      </div>
-  
     </nav>
-  
-    <script>
-      document.querySelector("#toggle").onclick = function() {
-      document.querySelector(".div3").style.display=(window.getComputedStyle(document.querySelector('.div3')).display=='none') ? "flex" : "none";}
-    </script>
 
     <!-- body -->
 
-    <div class="flex bg">
-      <div class="flex bg-gray-300 w-[47%] h-auto mt-4 items-center justify-center ml-[2%] rounded-[50px] bg-opacity-30 shadow-zinc-800 shadow-xl">
-        <h1 class="text-blue-500">guyedzgfuyezybfuyzbd</h1>
+    <div class="flex">
+      <div class="bg-gradient-to-r from-blue-600 to-blue-500 w-[47%] h-auto mt-4 ml-[2%] rounded-[50px] shadow-blue-700 shadow-xl">
+        <h1 class="flex text-white text-3xl mt-2 items-center justify-center">Qui suis-je ?</h1>
+        <p class="text-xl text-center mt-5 mb-5">Je m'appelle Anthony Ferron, j'ai 18 ans.<br>
+          Je suis actuellement en école d'informatique à l'institut G4, à Lyon 9.<br>
+          Je suis également en alternance chez MSI-Experts, une entreprise de support informatique pour le groupe Orpea. <br>
+          Passionné depuis tout petit par la technologie, c'est tout d'abord par les jeux vidéos, passion transmise par mon père, que l'informatique a pris une place importante dans ma vie. <br>
+          J'ai commencé le développement au collège avec du scratch, et j'ai de suite voulu savoir coder. <br>
+          Je me suis intéressé à Python pour commencer, avant de me diversifier sur plusieurs autres langages au cours des années.<br>
+          En arrivant en classe de première, j'ai dû changer de lycée pour pouvoir continuer l'informatique, et suis donc parti rejoindre le lycée Louis Lachenal à Annecy pour suivre la NSI.<br>
+          C'est finalement après avoir obtenu mon baccalauréat que j'ai rejoint l'institut G4.<br>
+           </p>
+        <div class="w-[100%] flex items-center justify-center">
+          <img src="./icons/moi.png" class="flex w-[50%]">
+        </div>
       </div>
-      <div class="flex bg-gray-300 w-[47%] h-auto mt-4 items-center justify-center ml-[2%]      rounded-[50px] bg-opacity-30 shadow-zinc-800 shadow-xl">
-        <h1 class="m-3 text-center"></h1>
+      <div class="bg-gradient-to-r from-blue-500 to-blue-600 w-[47%] h-auto mt-4 ml-[2%] rounded-[50px] shadow-blue-700 shadow-xl">
+
       </div>
     </div>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="58beb3a6-b2f5-4ebb-a9bf-c4931a278a3d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
     <!-- foot -->
 
     <!-- end foot -->
-    <script type="module" src="/main.js"></script>
   </body>
 </html>

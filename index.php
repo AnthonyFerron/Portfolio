@@ -44,6 +44,46 @@
         </div>
       </div>
     </div>
+
+    <!-- contact -->
+
+    <?php
+    if (isset($_POST["message"])){            $message = "Ce message vous a été envoyé via la page contact du site du BDE Institut G4
+        Nom : " . $_POST["nom"] . "
+        Email : " . $_POST["email"] . "
+        Nom : " . $_POST["message"];
+        $retour  = mail("anthony.ferron74@gmail.com", "message formulaire BDE Institut G4" , "Email: ". $_POST["email"]." "."Nom: ".$_POST["nom"] ."  "."Message: ".$_POST["message"],"");
+        if ($retour) {
+            echo '<div class="alert alert-light text-align-center" role="alert">
+            le message a bien été envoyé!
+          </div>';
+        }
+    }
+    ?>
+
+    <div id="titre" >
+      <h1>CONTACTEZ-NOUS</h1>
+    </div>
+    <div id="forme" class="formres">
+     <div class="formulaire" id="formulaire" class="col-5" >
+        <h3>Formulaire de contact</h3>
+        <p class="texte">Laissez nous votre message.</p>
+        <form name="register-form" method="post" class="form form-control">
+          <div>
+            <input type="text" size="60%" name="nom" class="form-control" placeholder="Nom..." required />
+          </div>
+          <div>
+            <input type="text" name="email" class="form-control" placeholder="e-mail..." required />
+          </div>
+          <div>
+            <input type="text" id="register-form[message]" name="message" class="form-control" placeholder="Message..." required />
+          </div>
+            <div class="btn">
+            <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>
+          </div>
+         </form>
+      </div>
+  </div>
     
 
     <!-- foot -->

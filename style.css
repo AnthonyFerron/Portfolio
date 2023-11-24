@@ -5,3 +5,162 @@
 #toggle:checked + #links {
     display: flex;
 }
+
+/* fonts */
+@font-face {
+    font-family: "Roboto";
+    src: url("../polices/Roboto-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Oswald";
+    src: url("../polices/Oswald-Regular.ttf");
+  }
+
+body {
+  background-image: url(../icons/fond1.png);
+}
+
+
+#titre {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #0BB5FF ;
+    font-family: 'Roboto';
+}
+
+.formres {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#formulaire {
+    width: 30%;
+    color: #0BB5FF ;
+  
+    
+}
+
+form{
+  border: 1px solid #0BB5FF !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px !important ;
+}
+
+.form-control{
+    margin-bottom: 10%;
+    font-family: 'Roboto';
+    color: #001c66 ;
+}
+
+
+.btn {
+    font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #00E54E;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 229, 78, 0,16), 0 3px 6px rgba(0, 229, 78, 0,16);
+  color: #00E54E;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  background: rgba(0, 229, 78, 0,16);
+}
+
+#icon{
+    margin-left: 50%;
+    margin-right: 50%;
+    padding: 50%;
+
+}
+
+#reseaux {
+    background-color: #ffffff;
+    border: 1px solid #0BB5FF ;
+    border-radius: 5%;
+    padding: 3%;
+    font-family: 'Roboto';
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px;
+
+}
+
+.titre-reseaux{
+  color: #0BB5FF;
+}
+
+.texte{
+  color: #000033;
+}
+
+.adresse-reseaux{
+  color:#00e54e ;
+}
+
+.button1 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.7em 2em;
+  border: 3px solid #00E54E;
+  border-radius: 2px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 229, 78, 0,16), 0 3px 6px rgba(0, 229, 78, 0,16);
+  color: #00E54E;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+  background: rgba(0, 229, 78, 0,16);
+}
+
+.button:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #00E54E;
+  z-index: -1;
+}
+
+button:hover,
+button:focus {
+  color: white;
+}
+
+button:hover:before,
+button:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.input {
+    margin: 3%;
+    font-family: 'Roboto';
+}
+
+#reseaux {
+  margin-bottom: 150px;
+}

@@ -151,13 +151,13 @@
           <p class="texte">Laissez nous votre message.</p>
           <form name="register-form" method="post" class="form form-control">
             <div>
-              <input type="text" size="60%" name="nom" class="form-control" placeholder="Nom..." required />
+              <input type="text" size="60%" name="nom" class="form-control text-black" placeholder="Nom..." required />
             </div>
             <div>
-              <input type="text" name="email" class="form-control" placeholder="e-mail..." required />
+              <input type="text" name="email" class="form-control text-black" placeholder="e-mail..." required />
             </div>
             <div>
-              <input type="text" id="register-form[message]" name="message" class="form-control" placeholder="Message..." required />
+              <input type="text" id="register-form[message]" name="message" class="form-control text-black" placeholder="Message..." required />
             </div>
               <div class="btn">
               <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>

@@ -130,21 +130,21 @@
                       $retour = mail("anthony.ferron74@gmail.com", "Message de contact depuis le portfolio", $messageToSend, "");
                       
                       if ($retour) {
-                          echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">
-                              Le message a bien été envoyé!
-                          </div>';
-                          // Ajout du script JavaScript pour réinitialiser le formulaire
-                          echo '<script>
-                                  document.getElementById("myForm").reset();
-                                </script>';
+                        echo '<div class="alert alert-success text-align-center" role="alert">
+                            Le message a bien été envoyé!
+                        </div>';
+                
+                        // Ajout du script JavaScript pour réinitialiser le formulaire
+                        echo '<script>
+                                document.getElementById("myForm").reset();
+                              </script>';
                       } else {
-                          echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
-                              Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.
-                          </div>';
-                      }
-                  }
-              }
-            ?> 
+                        echo '<div class="alert alert-danger text-align-center" role="alert">
+                            Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.
+                        </div>';
+                    }
+                }
+                ?> 
             <div class="text-center font-medium mx-auto rounded-3xl w-[50%] mt-[10px] mb-[20px] hover:bg-blue-400 md:shadow-zinc-800 md:shadow-xl bg-blue-700 text-white cursor-pointer">
               <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>
             </div>

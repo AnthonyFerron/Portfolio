@@ -94,6 +94,20 @@
   <!-- contact -->
 
   <?php
+  // if (isset($_POST["message"])){            $message = "Ce message vous a été envoyé via la page contact du site du BDE Institut G4
+  //     Nom : " . $_POST["nom"] . "
+  //     Email : " . $_POST["email"] . "
+  //     Nom : " . $_POST["message"];
+  //     $retour  = mail("anthony.ferron74@gmail.com", "message formulaire BDE Institut G4" , "Email: ". $_POST["email"]." "."Nom: ".$_POST["nom"] ."  "."Message: ".$_POST["message"],"");
+  //     if ($retour) {
+  //         echo '<div class="alert alert-light text-align-center" role="alert">
+  //         le message a bien été envoyé!
+  //       </div>';
+  //     }
+  // }
+  ?>
+  
+  <?php
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $nom = $_POST["nom"];
       $email = $_POST["email"];
@@ -123,9 +137,10 @@
           }
       }
   }
-  ?>
+  ?> 
 
-  <div class="flex md:flex-row flex-col" id="contact">
+
+  <div class="flex md:flex-row flex-col text-black" id="contact">
     <div class="flex justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <div class="flex justify-center items-center w-[100%] text-2xl font-bold text-white" >
         <h1>CONTACTEZ-MOI</h1>

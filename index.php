@@ -112,37 +112,32 @@
             </div>
             <?php
               if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                  $nom = $_POST["nom"];
-                  $email = $_POST["email"];
-                  $message = $_POST["message"];
-              
-                  // Vérification de l'email
-                  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                      echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
-                          Veuillez saisir une adresse e-mail valide.
-                      </div>';
+                $nom = $_POST["nom"];
+                $email = $_POST["email"];
+                $message = $_POST["message"];
+            
+                // Vérification de l'email
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                  echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
+                    Veuillez saisir une adresse e-mail valide.
+                  </div>';
+                } else {
+                  $messageToSend = "Ce message vous a été envoyé via votre portfolio
+                    Nom : " . $nom . "
+                    Email : " . $email . "
+                    Message : " . $message;
+          
+                  $retour = mail("anthony.ferron74@gmail.com", "Message de contact depuis le portfolio", $messageToSend, "");
+                  
+                  if ($retour) {
+                    echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">
+                      Le message a bien été envoyé!
+                    </div>';
                   } else {
-                      $messageToSend = "Ce message vous a été envoyé via votre portfolio
-                          Nom : " . $nom . "
-                          Email : " . $email . "
-                          Message : " . $message;
-              
-                      $retour = mail("anthony.ferron74@gmail.com", "Message de contact depuis le portfolio", $messageToSend, "");
-                      
-                      if ($retour) {
-                        echo '<div class="alert alert-success text-align-center" role="alert">
-                            Le message a bien été envoyé!
-                        </div>';
-                
-                        // Ajout du script JavaScript pour réinitialiser le formulaire
-                        echo '<script>
-                                document.getElementById("myForm").reset();
-                              </script>';
-                      } else {
-                        echo '<div class="alert alert-danger text-align-center" role="alert">
-                            Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.
-                        </div>';
-                    }
+                    echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
+                      Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.
+                    </div>';
+                  }
                 }
               }
             ?> 

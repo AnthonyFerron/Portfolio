@@ -144,7 +144,8 @@
                         </div>';
                     }
                 }
-                ?> 
+              }
+            ?> 
             <div class="text-center font-medium mx-auto rounded-3xl w-[50%] mt-[10px] mb-[20px] hover:bg-blue-400 md:shadow-zinc-800 md:shadow-xl bg-blue-700 text-white cursor-pointer">
               <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>
             </div>

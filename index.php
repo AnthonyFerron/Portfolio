@@ -122,12 +122,12 @@
                           Veuillez saisir une adresse e-mail valide.
                       </div>';
                   } else {
-                      $messageToSend = "Ce message vous a été envoyé via la page contact du site du BDE Institut G4
+                      $messageToSend = "Ce message vous a été envoyé via votre portfolio
                           Nom : " . $nom . "
                           Email : " . $email . "
                           Message : " . $message;
               
-                      $retour = mail("anthony.ferron74@gmail.com", "message formulaire depuis le portfolio", $messageToSend, "");
+                      $retour = mail("anthony.ferron74@gmail.com", "Message de contact depuis le portfolio", $messageToSend, "");
                       
                       if ($retour) {
                           echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">

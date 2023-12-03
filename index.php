@@ -10,9 +10,9 @@
 <body class="bg-gradient-to-r from-sky-950 to-blue-950 text-white scroll-down">
   
   <!-- head -->
-  
+
   <nav class="flex w-[100%] h-[100px] bg-blue-700 shadow-zinc-800 shadow-xl mb-[120px] md:mb-10">
-    <label for="toggle" class="md:hidden cursor-pointer text-[40px] absolute top-[15px] left-[30px] ">☰</label>
+    <label for="toggle" class="md:hidden cursor-pointer text-[70px] absolute top-[-10px] left-[30px] ">&equiv;</label>
     <input type="checkbox" class="hidden" id="toggle">
     <div id="links" class="hidden flex-col bg-blue-700 h-[220px] md:flex md:flex-row w-full md:h-full justify-around items-center "> <!-- main_pages -->
       <a href="#contact" class="md:w-[33%] md:flex md:items-center md:justify-center md:h-[100px] hover:bg-blue-400 md:shadow-zinc-800 md:shadow-xl">Contact</a>
@@ -94,15 +94,33 @@
   <!-- contact -->
 
   <?php
-  if (isset($_POST["message"])){            $message = "Ce message vous a été envoyé via la page contact du site du BDE Institut G4
-      Nom : " . $_POST["nom"] . "
-      Email : " . $_POST["email"] . "
-      Nom : " . $_POST["message"];
-      $retour  = mail("anthony.ferron74@gmail.com", "message formulaire BDE Institut G4" , "Email: ". $_POST["email"]." "."Nom: ".$_POST["nom"] ."  "."Message: ".$_POST["message"],"");
-      if ($retour) {
-          echo '<div class="alert alert-light text-align-center" role="alert">
-          le message a bien été envoyé!
-        </div>';
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $nom = $_POST["nom"];
+      $email = $_POST["email"];
+      $message = $_POST["message"];
+  
+      // Vérification de l'email
+      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+          echo '<div class="alert alert-danger text-align-center" role="alert">
+              Veuillez saisir une adresse e-mail valide.
+          </div>';
+      } else {
+          $messageToSend = "Ce message vous a été envoyé via la page contact du site du BDE Institut G4
+              Nom : " . $nom . "
+              Email : " . $email . "
+              Message : " . $message;
+  
+          $retour = mail("anthony.ferron74@gmail.com", "message formulaire BDE Institut G4", $messageToSend, "");
+          
+          if ($retour) {
+              echo '<div class="alert alert-success text-align-center" role="alert">
+                  Le message a bien été envoyé!
+              </div>';
+          } else {
+              echo '<div class="alert alert-danger text-align-center" role="alert">
+                  Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.
+              </div>';
+          }
       }
   }
   ?>

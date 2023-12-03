@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="58beb3a6-b2f5-4ebb-a9bf-c4931a278a3d";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
-<body class="bg-gradient-to-r from-sky-950 to-blue-950 text-white scroll-down">
+<body class="bg-gradient-to-r from-sky-950 to-blue-950 text-white scroll-down overflow-x-hidden">
   
   <!-- head -->
 
@@ -24,9 +24,9 @@
   <!-- body -->
 
   <div class="flex md:flex-row flex-col">
-    <div class="bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
+    <div class="flex flex-col justify-between items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <h1 class="flex text-white text-3xl mt-2 items-center justify-center">Qui suis-je ?</h1>
-      <p class="text-xl text-center mt-5 mb-5 mr-5 ml-5">Je m'appelle Anthony Ferron, j'ai 18 ans.<br>
+      <p class="md:text-2xl text-xl text-center mt-5 mb-5 mr-5 ml-5">Je m'appelle Anthony Ferron, j'ai 18 ans.<br>
         Je suis actuellement en &eacute;cole d'informatique &agrave; l'institut G4, &agrave; Lyon 9.<br>
         Je suis &eacute;galement en alternance chez MSI-Experts, une entreprise de support informatique pour le groupe Orpea. <br>
         Passionn&eacute; depuis tout petit par la technologie, c'est tout d'abord par les jeux vid&eacute;os, passion transmise par mon p&egrave;re, que l'informatique a pris une place importante dans ma vie. <br>
@@ -93,73 +93,55 @@
 
   <!-- contact -->
 
-  <?php
-  // if (isset($_POST["message"])){            $message = "Ce message vous a été envoyé via la page contact du site du BDE Institut G4
-  //     Nom : " . $_POST["nom"] . "
-  //     Email : " . $_POST["email"] . "
-  //     Nom : " . $_POST["message"];
-  //     $retour  = mail("anthony.ferron74@gmail.com", "message formulaire BDE Institut G4" , "Email: ". $_POST["email"]." "."Nom: ".$_POST["nom"] ."  "."Message: ".$_POST["message"],"");
-  //     if ($retour) {
-  //         echo '<div class="alert alert-light text-align-center" role="alert">
-  //         le message a bien été envoyé!
-  //       </div>';
-  //     }
-  // }
-  ?>
-  
-  <?php
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      $nom = $_POST["nom"];
-      $email = $_POST["email"];
-      $message = $_POST["message"];
-  
-      // Vérification de l'email
-      if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-          echo '<div class="alert alert-danger text-align-center" role="alert">
-              Veuillez saisir une adresse e-mail valide.
-          </div>';
-      } else {
-          $messageToSend = "Ce message vous a été envoyé via la page contact du site du BDE Institut G4
-              Nom : " . $nom . "
-              Email : " . $email . "
-              Message : " . $message;
-  
-          $retour = mail("anthony.ferron74@gmail.com", "message formulaire BDE Institut G4", $messageToSend, "");
-          
-          if ($retour) {
-              echo '<div class="alert alert-success text-align-center" role="alert">
-                  Le message a bien été envoyé!
-              </div>';
-          } else {
-              echo '<div class="alert alert-danger text-align-center" role="alert">
-                  Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.
-              </div>';
-          }
-      }
-  }
-  ?> 
-
-
   <div class="flex md:flex-row flex-col text-black" id="contact">
-    <div class="flex justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
+    <div class="flex flex-col justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <div class="flex justify-center items-center w-[100%] text-2xl font-bold text-white" >
         <h1>CONTACTEZ-MOI</h1>
       </div>
-       <div class="flex justify-center items-center w-[100%]">   <!-- id:forme class=formes -->
-        <div class="flex flex-col" > <!-- id/class:formulaire -->
-          <h3>Formulaire de contact</h3>
-          <p class="texte">Laissez nous votre message.</p>
+       <div class="flex justify-center items-center w-[100%]">
+        <div class="flex flex-col justify-center items-center" >
           <form name="register-form" method="post" class="form form-control">
-            <div>
-              <input type="text" size="60%" name="nom" class="form-control text-black" placeholder="Nom..." required />
+            <div class="flex justify-center items-center">
+              <input type="text" size="60%" name="nom" class=" mt-[25px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="Nom..." required />
             </div>
-            <div>
-              <input type="text" name="email" class="form-control text-black" placeholder="e-mail..." required />
+            <div class="flex justify-center items-center">
+              <input type="text" name="email" class="mt-[10px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="e-mail..." required />
             </div>
-            <div>
-              <input type="text" id="register-form[message]" name="message" class="form-control text-black" placeholder="Message..." required />
+            <div class="flex justify-center items-center">
+              <input type="text" id="register-form[message]" name="message" class="mt-[10px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="Message..." required />
             </div>
-              <div class="btn">
+            <?php
+              if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                  $nom = $_POST["nom"];
+                  $email = $_POST["email"];
+                  $message = $_POST["message"];
+              
+                  // Vérification de l'email
+                  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                      echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
+                          Veuillez saisir une adresse e-mail valide.
+                      </div>';
+                  } else {
+                      $messageToSend = "Ce message vous a été envoyé via la page contact du site du BDE Institut G4
+                          Nom : " . $nom . "
+                          Email : " . $email . "
+                          Message : " . $message;
+              
+                      $retour = mail("anthony.ferron74@gmail.com", "message formulaire depuis le portfolio", $messageToSend, "");
+                      
+                      if ($retour) {
+                          echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">
+                              Le message a bien été envoyé!
+                          </div>';
+                      } else {
+                          echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
+                              Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.
+                          </div>';
+                      }
+                  }
+              }
+            ?> 
+            <div class="text-center font-medium mx-auto rounded-3xl w-[50%] mt-[10px] mb-[20px] hover:bg-blue-400 md:shadow-zinc-800 md:shadow-xl bg-blue-700 text-white cursor-pointer">
               <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>
             </div>
           </form>
@@ -168,11 +150,16 @@
     </div>
 
     <div class="flex justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
-      <div class="flex justify-center items-center w-[100%] text-2xl font-bold text-white" >
-        <a href="./icons/CV.pdf" target="_blank">Mon cv ?</a>
+      <div class="flex flex-col justify-center items-center w-[100%] text-2xl font-bold text-white" >
+        <a href="./icons/CV.pdf" target="_blank">Vous souhaitez t&eacute;l&eacute;charger mon CV ?</a>
+        <button class="flex flex-row justify-center items-center bg-blue-700 w-auto h-auto">
+          <a href="./icons/CV-Anthony-Ferron.pdf" class="w-full h-full z-0">T&eacute;l&eacute;charger mon CV</a>
+          <img src="./icons/download.png" class="w-[30px] ml-[20px]">
+        </button>
       </div>
     </div>
   </div>
+  <p><br><br><br><br></p>
 
   
 

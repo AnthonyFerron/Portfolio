@@ -27,7 +27,7 @@
     <div class="flex flex-col justify-between items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <h1 class="flex text-white text-3xl mt-2 items-center justify-center">Qui suis-je ?</h1>
       <p class="md:text-2xl text-xl text-center mt-5 mb-5 mr-5 ml-5">Je m'appelle Anthony Ferron, j'ai 18 ans.<br>
-        Je suis actuellement en &eacute;cole d'informatique à l'institut G4, &agrave; Lyon 9.<br>
+        Je suis actuellement en &eacute;cole d'informatique &agrave; l'institut G4, &agrave; Lyon 9.<br>
         Je suis &eacute;galement en alternance chez MSI-Experts, une entreprise de support informatique pour le groupe Orpea. <br>
         Passionn&eacute; depuis tout petit par la technologie, c'est tout d'abord par les jeux vid&eacute;os, passion transmise par mon p&egrave;re, que l'informatique a pris une place importante dans ma vie. <br>
         J'ai commenc&eacute; le d&eacute;veloppement au coll&egrave;ge avec du scratch, et j'ai de suite voulu savoir coder. <br>

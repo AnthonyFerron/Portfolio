@@ -131,8 +131,13 @@
                   
                   if ($retour) {
                     echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">
-                      Le message a bien été envoyé!
+                        Le message a bien été envoyé!
                     </div>';
+        
+                    // Réinitialiser les variables après envoi
+                    $nom = "";
+                    $email = "";
+                    $message = "";
                   } else {
                     echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
                       Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.

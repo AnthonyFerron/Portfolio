@@ -100,7 +100,7 @@
       </div>
        <div class="flex justify-center items-center w-[100%]">
         <div class="flex flex-col justify-center items-center" >
-          <form name="register-form" method="post" class="form form-control">
+          <form id="form" name="register-form" method="post" class="form form-control">
             <div class="flex justify-center items-center">
               <input type="text" size="60%" name="nom" class=" mt-[25px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="Nom..." required />
             </div>
@@ -140,7 +140,7 @@
                     $message = "";
 
                     echo '<script>
-                    document.getElementById("register-form").reset();
+                    document.getElementById("form").reset();
                     </script>';
                   } else {
                     echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">

@@ -138,6 +138,10 @@
                     $nom = "";
                     $email = "";
                     $message = "";
+
+                    echo '<script>
+                    document.getElementById("register-form").reset();
+                    </script>';
                   } else {
                     echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
                       Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.

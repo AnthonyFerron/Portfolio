@@ -93,7 +93,7 @@
 
   <!-- contact -->
 
-  <div class="flex md:flex-row flex-col text-black" id="contact">
+  <div class="flex md:flex-row flex-col text-black mb-[100px]" id="contact">
     <div class="flex flex-col justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <div class="flex justify-center items-center w-[100%] text-2xl font-bold text-white" >
         <h1>CONTACTEZ-MOI</h1>

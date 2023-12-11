@@ -110,52 +110,6 @@
             <div class="flex justify-center items-center">
               <input type="text" id="register-form[message]" name="message" class="mt-[10px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="Message..." required />
             </div>
-            <?php
-            session-start();
-              if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $nom = $_POST["nom"];
-                $email = $_POST["email"];
-                $message = $_POST["message"];
-            
-                // Vérification de l'email
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                  echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
-                    Veuillez saisir une adresse e-mail valide.
-                  </div>';
-                } else {
-                  $messageToSend = "Ce message vous a été envoyé via votre portfolio
-                    Nom : " . $nom . "
-                    Email : " . $email . "
-                    Message : " . $message;
-          
-                  $retour = mail("anthony.ferron74@gmail.com", "Message de contact depuis le portfolio", $messageToSend, "");
-                  
-                  if ($retour) {
-                    $_SESSION['message_success'] = "Le message a bien été envoyé!";
-                    header("Location: " . $_SERVER['PHP_SELF']);
-                    exit;
-                  } else {
-                    $_SESSION['message_error'] = "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.";
-                  }
-                }
-              }
-              if (!empty($_SESSION['message_success'])) {
-                echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">'
-                    . $_SESSION['message_success'] .
-                    '</div>';
-                // Supprimer le message de succès après l'avoir affiché
-                unset($_SESSION['message_success']);
-            }
-
-            if (!empty($_SESSION['message_error'])) {
-                echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">'
-                    . $_SESSION['message_error'] .
-                    '</div>';
-                // Supprimer le message d'erreur après l'avoir affiché
-                unset($_SESSION['message_error']);
-            }
-            exit;
-            ?> 
             <div class="text-center font-medium mx-auto rounded-3xl w-[50%] mt-[10px] mb-[20px] hover:bg-blue-400 md:shadow-zinc-800 md:shadow-xl bg-blue-700 text-white cursor-pointer">
               <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>
             </div>

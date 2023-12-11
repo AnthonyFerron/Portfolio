@@ -139,24 +139,23 @@
                   }
                 }
               }
-            ?> 
-            <?php
               if (!empty($_SESSION['message_success'])) {
-                  echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">'
-                      . $_SESSION['message_success'] .
-                      '</div>';
-                  // Supprimer le message de succès après l'avoir affiché
-                  unset($_SESSION['message_success']);
-              }
+                echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">'
+                    . $_SESSION['message_success'] .
+                    '</div>';
+                // Supprimer le message de succès après l'avoir affiché
+                unset($_SESSION['message_success']);
+            }
 
-              if (!empty($_SESSION['message_error'])) {
-                  echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">'
-                      . $_SESSION['message_error'] .
-                      '</div>';
-                  // Supprimer le message d'erreur après l'avoir affiché
-                  unset($_SESSION['message_error']);
-              }
-            ?>
+            if (!empty($_SESSION['message_error'])) {
+                echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">'
+                    . $_SESSION['message_error'] .
+                    '</div>';
+                // Supprimer le message d'erreur après l'avoir affiché
+                unset($_SESSION['message_error']);
+            }
+            exit;
+            ?> 
             <div class="text-center font-medium mx-auto rounded-3xl w-[50%] mt-[10px] mb-[20px] hover:bg-blue-400 md:shadow-zinc-800 md:shadow-xl bg-blue-700 text-white cursor-pointer">
               <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>
             </div>

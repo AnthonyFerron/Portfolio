@@ -38,20 +38,24 @@ const product = [
     image: '../icons/librairie.png',
     title: 'Librairie',
     link: 'https://ferron.labo-g4.fr/librairie/',
-    content: "Bienvenue dans l'univers captivant de Nouvelle Plume, la librairie qui s'illumine à l'image de la Fête des Lumières à Lyon! Derrière chaque pixel, chaque ligne de code, se cache l'essence d'un projet moderne et vibrant, né de l'union entre créativité et expertise technique. Imaginons ensemble une cliente fictive exceptionnelle, notre précieuse coopératrice. De la conception du nom à l'élaboration du logo, de la définition de la charte graphique à la création d'une maquette résolument moderne, chaque étape fut un voyage exaltant. Les rendez-vous hebdomadaires avec notre coopératrice étaient autant d'occasions de transformer des idées en réalité. Chaque validation était une victoire, chaque ajustement une leçon apprise. Le site de Nouvelle Plume n'est pas simplement une vitrine en ligne, c'est une expérience visuelle moderne où compétences techniques, créativité et collaboration se fondent harmonieusement. Explorez chaque recoin de ce site, où la magie de la Fête des Lumières à Lyon s'exprime à travers un design éclairé. Entrez dans notre univers virtuel, où chaque clic résonne avec le savoir-faire acquis, où chaque page est une invitation à explorer les frontières de la conception web. Bienvenue dans Nouvelle Plume, une librairie moderne où la magie de la création rencontre la rigueur du développement, illuminant votre parcours en ligne.",
+    content: "Ce projet avait pour but de créer une identité visuelle complète pour une cliente. Cela allait du nom au site web finis, en passant par le logo et la maquette. Ce projet m’aura apporté des connaissances en PAO, ainsi qu’une expérience en tant que chef de projet, et une expérience de relation client. Ce site est donc un site vitrine pour une toute nouvelle librairie ayant ouvert le 8 décembre 2023. Notre but, par équipe de 3, était de promouvoir cette librairie a l’aide d’une vitrine commerciale forte. Nous avons également créé un stop-trottoir, un flyer, ainsi qu’un marque page aux couleurs de la librairie.",
     warning: 'Attention, site uniquement accessible sur PC'
 },
 {
     id: 3,
     image: '../icons/portfolio.png',
     title: 'Portfolio',
-    link: 'https://ferron.labo-g4.fr/'
+    link: 'https://ferron.labo-g4.fr/',
+    content: "",
+    warning: "Site accessible sur téléphone et PC"
 },
 {
     id: 2,
     image: '../icons/bde.jpg',
     title: 'BDE G4',
-    link: 'https://ferron.labo-g4.fr/G4-BDE/'
+    link: 'https://ferron.labo-g4.fr/G4-BDE/',
+    content : "Dans ce projet par équipes de 4, nous devions créer le site du BDE de notre école. Ce site avait pour but de créer un moyen de communication et d'annonce rapide et efficace pour leurs événements. Il nous fallait donc un design simple, présentant les membres du BDE ainsi que les événements à venir. Nous avons également pris la liberté de créer une page souvenir, nous rappelant à tous les meilleurs moments passés dans leurs événements.",
+    warning: ""
 },
 ];
 
@@ -75,9 +79,11 @@ const displayItem = (items) => {
     {
         var{image, title, link, content} = item;
         return(
-            `<div class="flex flex-col justify-between items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[32%] h-auto mt-4 ml-[1%] mr-[1%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
-            <a href="${link}"><button class="text-white">${title}</button></a>
-            <p class="p-5 ">${content}</p>
+            `<div class="flex flex-col justify-center items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[32%] h-full mt-4 ml-[1%] mr-[1%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
+            <h1 class="text-2xl mt-2 mb-5">${title}</h1>
+            <img class="rounded-[20px] p-2" src="${image}">
+            <p class="p-5 mt-[-5px]">${content}</p>
+            <a href="${link}" target="_blank"><button class="text-white">${title}</button></a>
             </div>
 
             `)

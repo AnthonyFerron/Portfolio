@@ -118,6 +118,8 @@
       </div>
     </div>
 
+    <!-- cd download -->
+
     <div class="flex justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <div class="flex flex-col justify-center items-center w-[100%] text-2xl font-bold text-white" >
         <a href="./icons/CV.pdf" target="_blank">Vous souhaitez t&eacute;l&eacute;charger mon CV ?</a>

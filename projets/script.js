@@ -79,9 +79,9 @@ const displayItem = (items) => {
     {
         var{image, title, link, content} = item;
         return(
-            `<div class="flex flex-col justify-center items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[32%] h-auto mt-4 ml-[1%] mr-[1%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
+            `<div class="flex flex-col justify-between items-center bg-gradient-to-r from-blue-600 to-blue-500 xl:w-[32%] xl:my-0 my-10 h-auto mt-4 md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
             <h1 class="text-2xl mt-2 mb-5">${title}</h1>
-            <img class="rounded-[20px] p-2" src="${image}">
+            <a href="${link}"><img class="rounded-[20px] p-2" src="${image}"></a>
             <p class="p-5 mt-[-5px] text-white text-justify">${content}</p>
             <a href="${link}" target="_blank"><button class="text-white">${title}</button></a>
             </div>
@@ -90,4 +90,3 @@ const displayItem = (items) => {
     }).join('');
 }
 displayItem(categories);
-//<h1 class="text-md text-white font-[Roboto]">${grade}</h1>

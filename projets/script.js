@@ -37,7 +37,7 @@ const product = [
     id: 2,
     image: '../icons/librairie.png',
     title: 'Librairie',
-    link: 'https://ferron.labo-g4.fr/librairie/',
+    link: './librairie/',
     content: "Ce projet avait pour but de créer une identité visuelle complète pour une cliente. Cela allait du nom au site web finis, en passant par le logo et la maquette. Ce projet m'aura apporté des connaissances en PAO, ainsi qu'une expérience en tant que chef de projet, et une expérience de relation client. Nous avons dû apprendre de nouveaux langages tel que tailwind, javascript et php, qui nous serviront pour sur dans les prochains projets. Ce site est donc un site vitrine pour une toute nouvelle librairie ayant ouvert le 8 décembre 2023. Notre but, par équipe de 3, était de promouvoir cette librairie a l'aide d'une vitrine commerciale forte. Nous avons également créé un stop-trottoir, un flyer, ainsi qu'un marque page aux couleurs de la librairie.",
     responsives: 0,
     statuts: "Chef de projet <br> Equipe de 3 développeurs"
@@ -46,7 +46,7 @@ const product = [
     id: 3,
     image: '../icons/portfolio.png',
     title: 'Portfolio',
-    link: 'https://ferron.labo-g4.fr/',
+    link: '../',
     content: "Le Portfolio sur lequel vous êtes actuellement, est un projet réalisé en partie en cours, mais surtout sur mon temps libre. Ce projet a été créé dans le but de me présenter auprès des recruteurs ou même des autres développeurs. Les principales fonctions sont donc la présentation de mes projets et les possibilités de contact. Ce site a été construit avec le framework HTML Tailwind Css. Il y a également du PHP et du Javascript pour la gestion du formulaire de contact ou du filtre dans la page projet.",
     responsives: 1,
     statuts: "Unique développeur"
@@ -55,7 +55,7 @@ const product = [
     id: 2,
     image: '../icons/bde.png',
     title: 'BDE G4',
-    link: 'https://ferron.labo-g4.fr/G4-BDE/',
+    link: './G4-BDE/',
     content : "Dans ce projet par équipes de 4, nous devions créer le site du BDE de notre école. Ce site avait pour but de créer un moyen de communication et d'annonce rapide et efficace pour leurs événements. Il nous fallait donc un design simple, présentant les membres du BDE ainsi que les événements à venir. Nous avons également pris la liberté de créer une page souvenir, nous rappelant à tous les meilleurs moments passés dans leurs événements.",
     responsives: 1,
     statuts: "Chef de projet <br> Equipe de 4 développeurs"

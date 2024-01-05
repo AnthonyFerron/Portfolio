@@ -157,16 +157,15 @@
 
     <div class="flex justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <div class="flex flex-col justify-center items-center w-[100%] text-2xl font-bold text-white" >
-        <a href="./icons/CV.pdf" target="_blank" class="text-center">Vous souhaitez t&eacute;l&eacute;charger mon CV ?</a>
-        <button class="flex flex-row justify-center items-center bg-blue-700 w-auto h-auto">
-          <a href="./icons/CV-Anthony-Ferron.pdf" class="text-center bg-blue-700 hover:bg-blue-600  w-[200px] h-[75px] rounded-[30px] mb-5">T&eacute;l&eacute;charger mon CV</a>
+        <p class="text-center mt-5">Vous souhaitez t&eacute;l&eacute;charger mon CV ?</p>
+        <button class="flex flex-row justify-center items-center w-auto h-auto bg-blue-700 hover:bg-blue-600 rounded-[30px] p-2 my-5">
+          <a href="./icons/CV-Anthony-Ferron.pdf" target="_blank" class="w-full h-full z-0">T&eacute;l&eacute;charger mon CV</a>
           <img src="./icons/download.png" class="w-[30px] ml-[20px]">
         </button>
       </div>
     </div>
   </div>
   <p><br><br><br><br></p>
-  
   
 
   <!-- foot -->

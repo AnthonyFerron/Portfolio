@@ -135,7 +135,7 @@
                     echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">
                       Le message a bien été envoyé!
                     </div>';
-                    header("Location: ./projets?success=1"); // Remplace "index.php" par le chemin de la page vers laquelle tu veux rediriger
+                    header("Location: ./confirm?success=1"); // Remplace "index.php" par le chemin de la page vers laquelle tu veux rediriger
                     exit();
                   } else {
                     echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">

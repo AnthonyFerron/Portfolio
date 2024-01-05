@@ -94,31 +94,6 @@
 
   <!-- contact -->
 
-  <!-- <div class="flex md:flex-row flex-col text-black mb-[100px]" id="contact">
-    <div class="flex flex-col justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
-      <div class="flex justify-center items-center w-[100%] text-2xl font-bold text-white" >
-        <h1>CONTACTEZ-MOI</h1>
-      </div>
-       <div class="flex justify-center items-center w-[100%]">
-        <div class="flex flex-col justify-center items-center" >
-          <form id="form" name="register-form" method="post" class="form form-control">
-            <div class="flex justify-center items-center">
-              <input type="text" size="60%" name="nom" class=" mt-[25px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="Nom..." required />
-            </div>
-            <div class="flex justify-center items-center">
-              <input type="text" name="email" class="mt-[10px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="e-mail..." required />
-            </div>
-            <div class="flex justify-center items-center">
-              <input type="text" id="register-form[message]" name="message" class="mt-[10px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="Message..." required />
-            </div>
-            <div class="text-center font-medium mx-auto rounded-3xl w-[50%] mt-[10px] mb-[20px] hover:bg-blue-400 md:shadow-zinc-800 md:shadow-xl bg-blue-700 text-white cursor-pointer">
-              <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div> -->
-
   <div class="flex md:flex-row flex-col text-black" id="contact">
     <div class="flex flex-col justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <div class="flex justify-center items-center w-[100%] text-2xl font-bold text-white" >
@@ -181,9 +156,9 @@
 
     <div class="flex justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <div class="flex flex-col justify-center items-center w-[100%] text-2xl font-bold text-white" >
-        <a href="./icons/CV.pdf" target="_blank">Vous souhaitez t&eacute;l&eacute;charger mon CV ?</a>
+        <a href="./icons/CV.pdf" target="_blank" class="text-center bg-blue-700 hover:bg-blue-600  w-[200px] h-[75px] rounded-[30px] mb-5">Vous souhaitez t&eacute;l&eacute;charger mon CV ?</a>
         <button class="flex flex-row justify-center items-center bg-blue-700 w-auto h-auto">
-          <a href="./icons/CV-Anthony-Ferron.pdf" class="w-full h-full z-0">T&eacute;l&eacute;charger mon CV</a>
+          <a href="./icons/CV-Anthony-Ferron.pdf" class="w-full h-full z-0 text-center">T&eacute;l&eacute;charger mon CV</a>
           <img src="./icons/download.png" class="w-[30px] ml-[20px]">
         </button>
       </div>
@@ -191,7 +166,7 @@
   </div>
   <p><br><br><br><br></p>
 
-  
+ 
 
   <!-- foot -->
 

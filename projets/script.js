@@ -23,11 +23,11 @@ document.getElementById('btns').innerHTML=filters.map((btn)=>{
     var {name, id, tag} = btn;
     if(id=='1'){
         return(
-            "<button class='flex justify-center items-center bg-gradient-to-b from-blue-500 shadow backdrop-blur rounded-[30px] text-3xl md:w-[300px]  w-[196px] h-[55px] text-white mr-5 font-[Oswald]' onclick='document.location.reload("+(tag)+`)'>${name}</button>`
+            "<button class='flex justify-center items-center bg-gradient-to-b from-blue-500 shadow backdrop-blur rounded-[30px] text-3xl xl:w-[300px]  w-[196px] h-[55px] text-white mr-5 font-[Oswald]' onclick='document.location.reload("+(tag)+`)'>${name}</button>`
     )}
     else{
         return(
-            "<button class='flex justify-center items-center bg-gradient-to-b from-blue-500 shadow backdrop-blur rounded-[30px] text-3xl md:mt-0 mt-3 md:w-[300px]  w-[196px] h-[55px] text-white mr-5 font-[Oswald]' onclick='filterItems("+(id)+`)'>${name}</button>`
+            "<button class='flex justify-center items-center bg-gradient-to-b from-blue-500 shadow backdrop-blur rounded-[30px] text-3xl xl:mt-0 mt-3 xl:w-[300px]  w-[196px] h-[55px] text-white mr-5 font-[Oswald]' onclick='filterItems("+(id)+`)'>${name}</button>`
         )
     }
 }).join('');
@@ -102,7 +102,7 @@ const displayItem = (items) => {
     {
         var{image, title, link, content, statuts, responsives} = item;
         return(
-            `<div class="flex flex-col justify-between items-center bg-gradient-to-r from-blue-600 to-blue-500 xl:w-[32%] xl:my-10 my-10 h-auto mt-4 md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
+            `<div class="flex flex-col justify-between items-center bg-gradient-to-r from-blue-600 to-blue-500 xl:w-[32%] xl:my-10 my-10 h-auto mt-4 xl:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
             <h1 class="text-2xl mt-2 mb-5">${title}</h1>
             <a href="${link}"><img class="rounded-[20px] p-2" src="${image}"></a>
             <p class="text-center text-white text-xl">${statuts}</p>

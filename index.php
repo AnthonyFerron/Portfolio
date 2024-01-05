@@ -93,7 +93,7 @@
 
   <!-- contact -->
 
-  <div class="flex md:flex-row flex-col text-black mb-[100px]" id="contact">
+  <!-- <div class="flex md:flex-row flex-col text-black mb-[100px]" id="contact">
     <div class="flex flex-col justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
       <div class="flex justify-center items-center w-[100%] text-2xl font-bold text-white" >
         <h1>CONTACTEZ-MOI</h1>
@@ -116,7 +116,64 @@
           </form>
         </div>
       </div>
+    </div> -->
+
+  <div class="flex md:flex-row flex-col text-black" id="contact">
+    <div class="flex flex-col justify-around items-center bg-gradient-to-r from-blue-600 to-blue-500 md:w-[47%] h-auto mt-4 ml-[2%] mr-[2%] md:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
+      <div class="flex justify-center items-center w-[100%] text-2xl font-bold text-white" >
+        <h1>CONTACTEZ-MOI</h1>
+      </div>
+       <div class="flex justify-center items-center w-[100%]">
+        <div class="flex flex-col justify-center items-center" >
+          <form name="register-form" method="post" class="form form-control">
+            <div class="flex justify-center items-center">
+              <input type="text" size="60%" name="nom" class=" mt-[25px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="Nom..." required />
+            </div>
+            <div class="flex justify-center items-center">
+              <input type="text" name="email" class="mt-[10px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="e-mail..." required />
+            </div>
+            <div class="flex justify-center items-center">
+              <input type="text" id="register-form[message]" name="message" class="mt-[10px] w-[80%] p-2 border border-gray-300 rounded-md text-black bg-white" placeholder="Message..." required />
+            </div>
+            <?php
+              if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $nom = $_POST["nom"];
+                $email = $_POST["email"];
+                $message = $_POST["message"];
+            
+                // Vérification de l'email
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                  echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
+                    Veuillez saisir une adresse e-mail valide.
+                  </div>';
+                } else {
+                  $messageToSend = "Ce message vous a été envoyé via votre portfolio
+                    Nom : " . $nom . "
+                    Email : " . $email . "
+                    Message : " . $message;
+          
+                  $retour = mail("anthony.ferron74@gmail.com", "Message de contact depuis le portfolio", $messageToSend, "");
+                  
+                  if ($retour) {
+                    echo '<div class="alert alert-success text-center mt-[5px] text-white font-medium" role="alert">
+                      Le message a bien été envoyé!
+                    </div>';
+                  } else {
+                    echo '<div class="alert alert-danger text-center mt-[5px] text-white font-medium" role="alert">
+                      Une erreur s\'est produite lors de l\'envoi du message. Veuillez réessayer.
+                    </div>';
+                  }
+                }
+              }
+            ?> 
+            <div class="text-center font-medium mx-auto rounded-3xl w-[50%] mt-[10px] mb-[20px] hover:bg-blue-400 md:shadow-zinc-800 md:shadow-xl bg-blue-700 text-white cursor-pointer">
+              <input type="submit" value="Envoyer le message" name="Envoyer" class=" btn btn-outline-info"/>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 
     <!-- cd download -->
 

@@ -104,11 +104,11 @@ const displayItem = (items) => {
         return(
             `<div class="flex flex-col justify-between items-center bg-gradient-to-r from-blue-600 to-blue-500 xl:w-[32%] xl:my-10 my-10 h-auto mt-4 xl:mr-0 rounded-[50px] shadow-blue-700 shadow-xl">
             <h1 class="text-2xl mt-2 mb-5">${title}</h1>
-            <a href="${link}"><img class="rounded-[20px] p-2" src="${image}"></a>
+            <a href="${link}" target="_blank"><img class="rounded-[20px] p-2" src="${image}"></a>
             <p class="text-center text-white text-xl">${statuts}</p>
             <p class="p-5 mt-[-5px] text-white text-justify">${content}</p>
             <p class="text-center text-white text-xl mb-5">${responsive(responsives)}</p>
-            <a href="${link}" target="_blank"class="flex justify-center items-center bg-blue-700 hover:bg-blue-600  w-[200px] h-[75px] rounded-[30px] mb-5"><button class="text-white text-xl">Visiter le site </button></a>
+            <a href="${link}" target="_blank" class="flex justify-center items-center bg-blue-700 hover:bg-blue-600  w-[200px] h-[75px] rounded-[30px] mb-5"><button class="text-white text-xl">Visiter le site </button></a>
             </div>
 
             `)

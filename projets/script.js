@@ -64,7 +64,7 @@ const product = [
     id: 2,
     image: "../icons/poisson-free.png",
     title : 'Poisson Free',
-    link: "http://89.168.41.124/",
+    link: "http://89.168.41.124:3000/",
     content: "Ce Projet est actuellement en cours de développement. Vous pouvez néanmoins visiter le site pour en connaître son avancement. Le but de ce projet est de créer un site de restaurant click and collect avec suivi des commandes en temps réel. Le site est codé en Reactjs avec Tailwind Css pour le frontend, Express JS pour le backend ainsi que SQL pour la base de données. L'équipe frontend est composée de 3 personnes, tandis que l'équipe backend, que je dirige, est composée de 6 personnes dont 2 s'occupant de la base de données.",
     responsives: 1,
     statuts: "Chef de la partie Backend <br> 9 personnes dont 6 dans mon équipe "
